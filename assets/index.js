@@ -45,7 +45,7 @@ $(document).ready(function () {
     e.preventDefault();
     // Capturamos los datos enviados por el formulario de registro
     // Campo email
-    var email = $("#IngresoEmail").val();
+    var email = $("#ingresoEmail").val();
     //Campo Password
     var password = $("#ingresoPassword").val();
     // Metodo de firebase que permite registro de usarios con email
@@ -71,7 +71,7 @@ $(document).ready(function () {
   $("#btnIngresoEmail").click(function (e) {
     e.preventDefault();
     // Mostramos formulario de ingreso por email
-    $("#IngresoEmail").show();
+    $("#ingresoEmail").show();
     // Ocultamos boton de ingreso por email
     $("#btnIngresoEmail").hide();
   })
@@ -90,7 +90,7 @@ $(document).ready(function () {
         .signInWithEmailAndPassword(email, password)
         .then(userCredential => {
           // limpiar formualrio de ingreso
-          $("#IngresoEmail").trigger("reset");
+          $("#ingresoEmail").trigger("reset");
           $("#alert-login").hide();
           $("#alert-login-registro").hide();
         })
@@ -195,6 +195,7 @@ $(document).ready(function () {
     var mensaje = $("#postText").val();
     var id = $("#Posteo").val();
     console.log(id)
+
     if (mensaje.length > 0) {
       // Metodo de escritura para añadir elementos a la coleccion "post", 
       // si la coleccion no existe, la crea implicitamente
@@ -239,12 +240,12 @@ $(document).ready(function () {
               <p>Publicado el ${post.fecha} a las ${post.hora}</p>
               <button data-id="${doc.id}" class="btn btn-success btn-edit-post">
                 Editar
-              <button data-id="${doc.id}" class="btn btn-danger btn-delete-post">
-                Eliminar
-              </button>
-              <div class="recievedBox">
-          <button class="like">  <img class=patalike src="assets/img/paw-100s-276px (2).png"> Like<p class="likeNum">0</p></button>
+              <button data-id="${doc.id}" class="btn btn-danger btn-delete-post" style="margin-left:0.5rem;">
+                Eliminar<div class="recievedBox">
+          <button class="like">  <img class=patalike src="assets/img/paw-100s-276px (3).png"> Like<p class="likeNum">0</p></button>
       </div>
+              </button>
+              
             </div>
           </div>
         `;
@@ -271,7 +272,7 @@ $(document).ready(function () {
       })
       const getLike = document.querySelector('.like');
       const getLikeNum = document.querySelector('.likeNum');
-      //like button
+      //boton para me gusta
       let like = 0;
       increaseLike = () => {
           like ++

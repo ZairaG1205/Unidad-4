@@ -22,11 +22,11 @@
       <div class="container-fluid">
         <a class="navbar-brand"><img class="logo" src="assets//img/logito.png"></a>
         <div class="d-flex">
-          <button id="logout" class="btn btn-outline-info"><img src="assets/img/log out-100s-302px.png" style="width: 40px; height: 40px;"> Cerrar sesión</button>
+          <button id="logout" class="btn btn-outline-info"><img src="assets/img/bird-100s-267px.png" style="width: 40px; height: 40px;"> Cerrar sesión</button>
         </div>
       </div>
     </nav>
-    <img  class="gatos" src="assets/img/gatos login.png">
+    <img  class="gatos" id="gato" src="assets/img/gatos login.png">
     <div class="container mt-5">
       <div class="container py-5 h-100" id="login">
         <div class="row d-flex justify-content-left align-items-center h-100 ">
@@ -34,7 +34,7 @@
             <div class="card" style="border-radius: 1rem; border-color: 7rem;">
               <div class="card-body p-5 text-center">
                 <div class="mb-md-5 mt-md-4">
-                  <h2 class="fw-bold mb-4 text-uppercase">Login</h2>
+                  <h2 class="fw-bold mb-4 text-uppercase">Login <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div> </h2>
                   <div id="alert-login" class="alert alert-danger d-none" role="alert">
                     Email y contraseña incorrectos.
                   </div>
@@ -47,9 +47,9 @@
                         type="email"
                         placeholder="ingrese su email"
                         id="ingresoEmail"
-                        class="form-control form-control-lg"
+                        class="form-control form-control-lg mt-5"
                       />
-                      <label class="form-label mt-1" for="IngresoEmail">Email</label>
+                      <label class="form-label mt-1" for="ingresoEmail">Email</label>
                     </div>
 
                     <div class="form-outline form-white mb-4">
@@ -104,26 +104,16 @@
           </div>
         </div>
       </div>
-
+<!--<span><a href="javascript:void(0);" onclick="ocultargatos();"></a> 
+<script>
+  function ocultargatos(){
+    document.getElementById('gato').style.display = 'none';
+</script></span>!-->
       <div class="card mx-auto" id="contenidoWeb" style="border-radius: 1rem; width: 800px;  background-color: rgba(247, 247, 247, 0.068);
       box-shadow: 0 0 0.5rem rgb(16, 107, 114);">
         <div class="card-body">
           <!--<div class="recievedBox">
             <button class="like"> <img class="patalike" src="assets/img/paw-100s-276px (2).png"> Like <p class="likeNum">0</p></button>
-            <script>
-              const getLike = document.querySelector('.like');
-              const getLikeNum = document.querySelector('.likeNum');
-              //like button
-              let like = 0;
-              increaseLike = () => {
-                  like ++
-                  getLikeNum.innerHTML = `${like}`
-              }
-              likeClick = () => {
-                  increaseLike()
-              }
-              getLike.addEventListener(('click'), likeClick)
-          </script>
         </div>
         !-->
           <form id="postForm"action="">
@@ -133,7 +123,7 @@
               <textarea placeholder="Mensaje" class="form-control form-control-lg mt-3" id="postText" rows="3"></textarea>
               <input type="text" id="Posteo" class="d-none">
             </div>
-            <button id="btnSendPost" class="btn btn-outline-light btn-lg px-5" type="submit">Publicar</button>
+            <button id="btnSendPost" class="btn btn-outline-light btn-lg px-5" type="submit">Publicar <img class="raton" src="assets/img/toy-100s-2766px.png"></button>
             <button id="btnSavePost" class="btn btn-outline-light btn-lg px-5 d-none" type="submit">Actualizar</button>
 
           </form>
